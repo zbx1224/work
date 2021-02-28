@@ -1,0 +1,106 @@
+*{
+    background-color: rgb(224, 238, 243);
+    
+}
+.father{
+    width: 100%;
+}
+.top{
+    width: 100%;
+    height: 10vh;
+}
+.place{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.place img{
+    width: 8vw;
+    height: 8vw;
+}
+.place p{
+    font-size: 4vw;
+}
+#center{
+    width: 100%;
+    height: 78vh;
+}
+
+#center input{
+    width: 70vw;
+    height: 6vh;
+    border-radius: 50px;
+    margin-top: 29vh;
+    margin-left: 10vw;
+    padding-left: 15px;
+    font-size: 4vw;
+}
+#search{
+    width: 8vw;
+    height: 5vh;
+    position: absolute;
+    left: 75vw;
+    top: 41vh;
+    border-radius: 50px;
+}
+.bottom{
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+   
+}
+.option{
+    width: 20vw;
+    height: 8vh;
+}
+.option img{
+    margin-left: 6.5vw;
+    width: 7vw;
+    height: 7vw;
+}
+.option p{
+    text-align: center;
+    font-size: 4vw;
+    margin-top: -1vw;
+}
+
+#center p{
+    text-align: center;
+}
+.tem{
+    font-size: 5vh;
+    margin-top: 15vh;
+}
+.wea{
+    font-size: 4vh;
+    margin-top: -2vh;
+}
+
+.content{
+    margin-top: 10vh;
+}
+.daily{
+    width: 48vw;
+    height: 24vh;
+    border: 1px solid ghostwhite;
+   
+}
+.daily img{
+    margin-left: 17vw;
+}
+
+.futurn{
+    margin-top: 5vh;
+}
+.futurn p{
+    margin-top: 4vh;
+}
+#return{
+    position: absolute;
+    font-size: 30px;
+    margin-top: 1vh;
+}
