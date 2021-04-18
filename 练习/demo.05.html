@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call实现</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // var fun={name :"miaomiao"}
+    // function mo(param){
+    //     console.log(this.name);
+    //     console.log(param);
+    // }
+    // Function.prototype.myCall=function(context){
+    //     var str;
+    //     var reg=new RegExp('this','g');
+ 
+    //     str=this.toString().replace(reg,'context');
+ 
+    //     var newArguments = [];
+    //     for(var i = 1, len = arguments.length; i < len; i++) {
+    //         newArguments.push('arguments[' + i + ']');
+    //     }
+    //     eval('('+str+')('+newArguments+')'); 
+    // }
+      // mo.myCall(fun,'hello')
+      function mo(a,b,c,){
+          return{
+              name: this.name ,
+           a,b,c
+          }
+      }
+      var fun={name :"miaomiao"}
+    Function.prototype.myapply = function(obj,arr){
+        obj.fn = this;
+        var result;
+         if(!arr){
+             obj.fn();
+        }else{
+             var args = []; 
+       for(var i = 0; i < arr.length; i++) {
+             args.push('arr[' + i + ']');
+         }
+         
+         result= eval('obj.fn('+args+')');
+ }
+       
+         delete  obj.fn;
+         return result
+         
+}
+ var a =  mo.myapply(fun,['厉害','强大','帅气']);
+console.log(a);
+</script>
+</html>
