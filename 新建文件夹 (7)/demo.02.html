@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现flat效果</title>
+</head>
+<body>
+    
+</body>
+<script>
+    		let arr =[1,[2,3,[4,[5]]]]
+
+const checkType = (arr) => {
+    return Object.prototype.toString.call(arr).slice(8, -1);
+}
+Array.prototype.myFlat = function (num) {
+    let type = checkType(this);
+    let result = [];
+    if (!Object.is(type, "Array")) {
+        return;
+    }
+    this.forEach((item) => {
+        let cellType = checkType(item);
+        if (Object.is(cellType, "Array")) {
+            num--;
+            if (num < 0) {
+                let newArr = result.push(item);
+                return newArr;
+            }
+            result.push(...item.myFlat(num));
+        } else {
+            result.push(item);
+        }
+    })
+    return result;
+}
+console.log(arr.flat(Infinity));
+console.log(arr.myFlat()); 
+console.log(arr.myFlat(1));
+console.log(arr.myFlat(2));  
+console.log(arr.myFlat(Infinity)); 
+</script>
+</html>
